@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Resize your images with our free and simple tool. Check Out Our More Tools">
+  <meta name="keywords" content="tool, resize, image, image resize, image resizer, resize my pic, photo resizer, free resizer, free image resizer, simple image resizer">
+  <link rel="shortcut icon" href="resizedByCodewithHamza (2).png" type="image/png">
+  <title>Image Resizer - 100% Free Tool</title>
+</head>
+<body>
+
+  <div class="topnav" id="myTopnav">
+    <div class="logo"><i class="fa-solid fa-crop"></i> Image Resizer</div>
+    <div class="content">
+      <a href="https://codewithhamza1.github.io/moretoolscodewithhamza/">More Tools</a>
+    <a href="https://codewithhamza1.github.io/codewithhamza">Build Website</a>
+    <a href="https://github.com/codewithhamza1">Github</a>
+    <!-- <a href="#about"></a> -->
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+  <script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
+
+<div class="left">
+  <div class="inputs">
+    <h2>Resize your Image</h2>
+    <form>
+      <label for="file" class="upload">Upload an Image  <i class="fa-solid fa-upload"></i></label>
+      <input type="file" id="file" accept="image/*" onchange="loadImage(event)">
+
+      <label>Width </label>
+      <input type="number" id="imWidth" placeholder="Enter width in px">
+
+      <label>Height</label>
+      <input type="number" id="imHeight" placeholder="Enter height in px">
+    </form>
+
+    <button type="submit" id="preview">Resize <i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+  </div>
+
+  <div class="wrapper">
+    <canvas id="result">
+      <img src="" id="imgDisplayed" alt="">
+    </canvas>
+    <button id="down">Download <i class="fa-solid fa-download"></i></button>
+  </div>
+
+</div>
+
+  <script src="https://kit.fontawesome.com/82ae1f0515.js" crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+
+</body>
+</html>
